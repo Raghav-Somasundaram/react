@@ -5,6 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// FIX for issue #35268: Preserve variable references in JSX tags
+// When an identifier like 'Comp' (which holds a primitive value like 'div') is used as a JSX tag,
+// the compiler should preserve the variable reference instead of treating the variable name as a string.
 import {
   BasicBlock,
   BlockId,
